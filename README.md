@@ -64,11 +64,10 @@ GROQ_API_KEY_1=your_groq_api_key_here
 ## 💻 How to Run in Google Colab
 
 1. Upload `app.py`, `rag_module.py`, and `requirements.txt` to a Colab notebook.
-2. In a code cell, install the required packages:
+2. Install dependencies:
 
 ```python
-!pip install streamlit faiss-cpu PyPDF2 sentence-transformers openai==0.28 --quiet
-!npm install -g localtunnel
+!pip install -r requirements.txt
 ```
 
 3. Set your API key in another cell:
