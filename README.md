@@ -63,28 +63,29 @@ GROQ_API_KEY_1=your_groq_api_key_here
 
 ## 💻 How to Run in Google Colab
 
-1. Upload `app.py`, `rag_module.py`, and `requirements.txt` to your Colab environment.
-2. Install dependencies:
+1. Upload `app.py`, `rag_module.py`, and `requirements.txt` to a Colab notebook.
+2. In a code cell, install the required packages:
 
 ```python
-!pip install -r requirements.txt
+!pip install streamlit faiss-cpu PyPDF2 sentence-transformers openai==0.28 --quiet
+!npm install -g localtunnel
 ```
 
-3. Set your API key in the notebook:
+3. Set your API key in another cell:
 
 ```python
 import os
 os.environ['GROQ_API_KEY_1'] = "your_groq_api_key"
 ```
 
-4. Launch the app publicly:
+4. Add the code for `rag_module.py` and `app.py` using `%%writefile`, then launch the app:
 
 ```bash
-!wget -q -O - ipv4.icanhazip.com  # Show Colab IP (optional)
+!wget -q -O - ipv4.icanhazip.com  # Optional: View public IP
 !streamlit run app.py & npx localtunnel --port 8501
 ```
 
-5. Open the `.loca.lt` link to start chatting with your PDF! 🎉
+5. Open the generated `.loca.lt` link to start chatting with your PDF! 🎉
 
 ---
 
